@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --biru-gelap: #13293D;
+    --biru-tua: #006494;
+    --biru-sedang: #247BA0;
+    --biru-terang: #1B98E0;
+    --biru-muda: #E8F1F2;
+    --merah: #e63946;
+    --hijau: #2a9d8f;
+    --putih: #ffffff;
+}
+
+/* Pengaturan Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--biru-muda);
+    color: var(--biru-gelap);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.kotak-utama {
+    background-color: var(--putih);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(19, 41, 61, 0.1);
+    overflow: hidden;
+    border: 1px solid var(--biru-terang);
+}
+
+.judul {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--biru-gelap);
+    color: var(--putih);
+    font-size: 1.5rem;
+}
+
+/* Menu Tab */
+.menu-tab {
+    display: flex;
+    background-color: var(--biru-tua);
+}
+
+.tombol-tab {
+    flex: 1;
+    padding: 12px 5px;
+    border: none;
+    background: transparent;
+    color: var(--biru-muda);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    opacity: 0.7;
+}
+
+.tombol-tab:hover {
+    background-color: var(--biru-sedang);
+    opacity: 1;
+}
+
+.tombol-tab.aktif {
+    background-color: var(--putih);
+    color: var(--biru-tua);
+    opacity: 1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.isi-tab {
+    display: none;
+    padding: 24px;
+}
+
+.isi-tab.aktif {
+    display: block;
+    animation: muncul 0.3s ease-in-out;
+}
+
+/* Input */
+.grup-input {
+    margin-bottom: 16px;
+}
+
+.grup-input label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--biru-tua);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--biru-muda);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    color: var(--biru-gelap);
+}
+
+input[type="text"]:focus {
+    border-color: var(--biru-terang);
+    box-shadow: 0 0 0 3px rgba(27, 152, 224, 0.2);
+}
+
+input.error {
+    border-color: var(--merah);
+    animation: goyang 0.3s;
+}
+
+/* Layar Saintifik */
+#layar-saintifik {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #f8f9fa;
+    border: 2px solid var(--biru-terang);
+    letter-spacing: 2px;
+}
+
+/* Papan Tombol Saintifik */
+.papan-tombol {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.tombol {
+    padding: 12px 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.tombol:active {
+    transform: scale(0.95);
+}
+
+.tombol.angka {
+    background-color: var(--biru-muda);
+    color: var(--biru-gelap);
+}
+
+.tombol.angka:hover {
+    background-color: #d1e5e8;
+}
+
+.tombol.fungsi {
+    background-color: #d8e2dc;
+    color: var(--biru-gelap);
+}
+
+.tombol.fungsi:hover {
+    background-color: #cad6d0;
+}
+
+.tombol.operator {
+    background-color: var(--biru-sedang);
+    color: var(--putih);
+}
+
+.tombol.operator:hover {
+    background-color: var(--biru-tua);
+}
+
+.tombol.aksi {
+    background-color: var(--merah);
+    color: var(--putih);
+}
+
+.tombol.aksi:hover {
+    background-color: #c92a37;
+}
+
+.tombol.sama {
+    background-color: var(--hijau);
+    color: var(--putih);
+}
+
+.tombol.sama:hover {
+    background-color: #21867a;
+}
+
+/* Animasi */
+@keyframes goyang {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+@keyframes muncul {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
