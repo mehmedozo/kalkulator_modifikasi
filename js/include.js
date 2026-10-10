@@ -1,6 +1,3 @@
-// ================================
-// LOADER PARTIAL HTML + SCRIPT
-// ================================
 async function muatPartial(url, target) {
     const respon = await fetch(url);
     if (!respon.ok) throw new Error(`Gagal memuat ${url}`);

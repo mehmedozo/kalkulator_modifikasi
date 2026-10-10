@@ -34,7 +34,7 @@ function konversiAngka(nilai, basis) {
         if (basis !== 8)  inputOktal.value   = nilaiDesimal.toString(8);
         if (basis !== 16) inputHexa.value    = nilaiDesimal.toString(16).toUpperCase();
     } catch (e) {
-        // Diamkan saja kalau terjadi error
+        
     }
 }
 
