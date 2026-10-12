@@ -19,11 +19,11 @@ async function muatSemuaPartial() {
 }
 
 function muatScript(src) {
-    return new Promise((resolve, reject) => {
+    return new Promise((selesai, tolak) => {
         const s = document.createElement('script');
         s.src = src;
-        s.onload = resolve;
-        s.onerror = () => reject(new Error(`Gagal memuat ${src}`));
+        s.onload = selesai;
+        s.onerror = () => tolak(new Error(`Gagal memuat ${src}`));
         document.body.appendChild(s);
     });
 }
