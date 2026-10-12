@@ -28,6 +28,8 @@ function muatScript(src) {
     });
 }
 
+//ini adalah komentar fungsi mulai
+
 async function mulai() {
     try {
         await muatSemuaPartial();
