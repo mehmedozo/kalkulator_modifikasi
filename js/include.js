@@ -14,6 +14,7 @@ async function muatSemuaPartial() {
         })
     );
 }
+//fungsi muat script 
 
 function muatScript(src) {
     return new Promise((resolve, reject) => {
