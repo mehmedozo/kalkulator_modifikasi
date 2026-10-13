@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-    --biru-gelap: #13293D;
-    --biru-tua: #006494;
-    --biru-sedang: #247BA0;
-    --biru-terang: #1B98E0;
-    --biru-muda: #E8F1F2;
+    /*pallete warna utama*/
+    --malam-bordeaux: #13293D;
+    --mauve-shadow: #006494;
+    --palm-leaf: #247BA0;
+    --khaki-beige: #1B98E0;
+    --hijau-cream: #E8F1F2;
     --merah: #e63946;
     --hijau: #2a9d8f;
     --putih: #ffffff;
+    /*pallete warna tambahan*/
+    --hijau-hutan: #00a676;
+    --merah-strawberry: #f71735;
+    /*pallete warna tambahan*/
+    --malam-bordeaux: #3d0814;
+    --hijau-cream: #e7f9a9;
+    --khaki-beige: #c6b38e;
+    --palm-leaf: #9a9b73;
+    --mauve-shadow: #442f38;
 }
 
 /* Pengaturan Dasar */
@@ -20,8 +30,8 @@
 }
 
 body {
-    background-color: var(--biru-muda);
-    color: var(--biru-gelap);
+    background-color: var(--hijau-cream);
+    color: var(--malam-bordeaux);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,13 +46,13 @@ body {
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(19, 41, 61, 0.1);
     overflow: hidden;
-    border: 1px solid var(--biru-terang);
+    border: 1px solid var(--khaki-beige);
 }
 
 .judul {
     text-align: center;
     padding: 20px;
-    background-color: var(--biru-gelap);
+    background-color: var(--malam-bordeaux);
     color: var(--putih);
     font-size: 1.5rem;
 }
@@ -50,7 +60,7 @@ body {
 /* Menu Tab */
 .menu-tab {
     display: flex;
-    background-color: var(--biru-tua);
+    background-color: var(--mauve-shadow);
 }
 
 .tombol-tab {
@@ -58,7 +68,7 @@ body {
     padding: 12px 5px;
     border: none;
     background: transparent;
-    color: var(--biru-muda);
+    color: var(--hijau-cream);
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
@@ -67,13 +77,13 @@ body {
 }
 
 .tombol-tab:hover {
-    background-color: var(--biru-sedang);
+    background-color: var(--palm-leaf);
     opacity: 1;
 }
 
 .tombol-tab.aktif {
     background-color: var(--putih);
-    color: var(--biru-tua);
+    color: var(--mauve-shadow);
     opacity: 1;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -98,22 +108,22 @@ body {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-    color: var(--biru-tua);
+    color: var(--mauve-shadow);
 }
 
 input[type="text"] {
     width: 100%;
     padding: 12px;
-    border: 2px solid var(--biru-muda);
+    border: 2px solid var(--hijau-cream);
     border-radius: 8px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
-    color: var(--biru-gelap);
+    color: var(--malam-bordeaux);
 }
 
 input[type="text"]:focus {
-    border-color: var(--biru-terang);
+    border-color: var(--khaki-beige);
     box-shadow: 0 0 0 3px rgba(27, 152, 224, 0.2);
 }
 
@@ -128,7 +138,7 @@ input.error {
     font-size: 1.5rem;
     font-weight: 600;
     background-color: #f8f9fa;
-    border: 2px solid var(--biru-terang);
+    border: 2px solid var(--khaki-beige);
     letter-spacing: 2px;
 }
 
@@ -154,8 +164,8 @@ input.error {
 }
 
 .tombol.angka {
-    background-color: var(--biru-muda);
-    color: var(--biru-gelap);
+    background-color: var(--hijau-cream);
+    color: var(--malam-bordeaux);
 }
 
 .tombol.angka:hover {
@@ -164,7 +174,7 @@ input.error {
 
 .tombol.fungsi {
     background-color: #d8e2dc;
-    color: var(--biru-gelap);
+    color: var(--malam-bordeaux);
 }
 
 .tombol.fungsi:hover {
@@ -172,12 +182,12 @@ input.error {
 }
 
 .tombol.operator {
-    background-color: var(--biru-sedang);
+    background-color: var(--palm-leaf);
     color: var(--putih);
 }
 
 .tombol.operator:hover {
-    background-color: var(--biru-tua);
+    background-color: var(--mauve-shadow);
 }
 
 .tombol.aksi {
