@@ -1,6 +1,3 @@
-// ================================
-// LOADER PARTIAL HTML + SCRIPT
-// ================================
 async function muatPartial(url, target) {
     const respon = await fetch(url);
     if (!respon.ok) throw new Error(`Gagal memuat ${url}`);
@@ -10,13 +7,14 @@ async function muatPartial(url, target) {
 async function muatSemuaPartial() {
     const daftar = document.querySelectorAll('[data-include]');
     await Promise.all(
-        Array.from(daftar).map(async (el) => {
-            await muatPartial(el.dataset.include, el);
+        Array.from(daftar).map(async (elemen) => {
+            await muatPartial(elemen.dataset.include, elemen);
             // Ganti wrapper <div> dengan isi aslinya
-            el.replaceWith(...el.childNodes);
+            elemen.replaceWith(...elemen.childNodes);
         })
     );
 }
+//fungsi muat script 
 
 function muatScript(src) {
     return new Promise((resolve, reject) => {
@@ -27,6 +25,8 @@ function muatScript(src) {
         document.body.appendChild(s);
     });
 }
+
+//ini adalah komentar fungsi mulai
 
 async function mulai() {
     try {
